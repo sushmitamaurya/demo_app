@@ -8,7 +8,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('demo')),
+      appBar: AppBar(
+        title: Text('demo'),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
+      ),
+      drawer: Drawer(),
       body: Center(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
@@ -18,7 +22,32 @@ class HomePage extends StatelessWidget {
           color: Colors.pink[100],
           child: Column(
             children: [
-              Text("hello wolrd!"),
+              //Image(image: AssetImage('assets/Images/car.webp')),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(
+                    Icons.home,
+                    size: 30,
+                  ),
+                  Icon(
+                    Icons.menu,
+                    size: 30,
+                  ),
+                ],
+              ),
+              Text(
+                "hello wolrd!",
+                style: TextStyle(color: Colors.white, fontSize: 40),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text("submit"),
+                style: ElevatedButton.styleFrom(primary: Color(0xff1B1A17)),
+              )
             ],
           ),
         ),
