@@ -9,23 +9,23 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue[300],
         title: Text('demo'),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
       ),
       drawer: Drawer(),
       body: Center(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.pink[100],
+          ),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           padding: EdgeInsets.all(40),
           height: double.infinity,
           width: double.infinity,
-          color: Colors.pink[100],
           child: Column(
             children: [
-              //Image(image: AssetImage('assets/Images/car.webp')),
-              SizedBox(
-                height: 20,
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -38,6 +38,15 @@ class HomePage extends StatelessWidget {
                     size: 30,
                   ),
                 ],
+              ),
+              Container(
+                child: Image.asset(
+                  "assets/Images/dog.png",
+                  // height: 300,
+                  // width: 200,
+                  scale: 5,
+                  fit: BoxFit.cover,
+                ),
               ),
               Text(
                 "hello wolrd!",
